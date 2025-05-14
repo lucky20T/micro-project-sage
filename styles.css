@@ -36,6 +36,11 @@ nav a {
     color: #fff;
     font-size: 1.4rem;
 }
+a:hover {
+    color: #00d1d1;
+    transition: color 0.3s;
+    font-size: 1.5rem;
+}
 
 .hero {
     display: flex;
