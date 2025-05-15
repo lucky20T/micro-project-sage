@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body{
@@ -100,7 +101,17 @@ a:hover {
     .hero {
       flex-direction: column;
       text-align: center;
-      padding: 20px 5%;
+      padding: 10px 5%;
+    }
+    .header{
+        padding: 10px ;
+    }
+    .nav a{
+        font-size: 0.25rem;
+        line-height: 1;
+    }
+    .logo{
+        display: none;
     }
     
 
@@ -111,7 +122,8 @@ a:hover {
 #two {
     height: 100vh; /* Ensures section height equals the viewport height */
     width: 100vw;  /* Ensures full width of the viewport */
-    background-image: url('asset/image/background001.png');
+    background-image: url('asset/image/back.jpg'); /* Background image */
+
     background-size: cover;       /* Scales image to cover the entire section */
     background-position: center;  /* Keeps the image centered */
     background-repeat: no-repeat; /* Prevents tiling */
