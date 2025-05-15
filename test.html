@@ -3,124 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Experience</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #0d1b2a;
-      color: #fff;
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 10%;
-      background-color: transparent;
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #00d1d1;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 10%;
-      gap: 50px;
-    }
-
-    .hero-text {
-      max-width: 50%;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      background-color: #00d1d1;
-      color: #0d1b2a;
-      padding: 12px 30px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #00b3b3;
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text, .hero-image {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <title>test-page</title>
+  <link rel="stylesheet" href="testc.css">
 </head>
 <body>
-  <header>
-    <div class="logo">W</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>We Create<br>Digital Experiences</h1>
-      <p>We are a digital agency specialized in designing and developing user-friendly digital experiences.</p>
-      <button class="btn">Get Started</button>
+  <div class="container" >
+    <div class="card">
+      <div class="card-img">
+        <img src="asset/image/sage-prop.jpg" alt="sage-prop">
+      </div>
+      <div class="card-body">
+        <p>This is a simple card with some content.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn">Click Me</button>
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="asset/image/back.jpg" alt="Digital Experience Illustration">
-    </div>
-  </section>
+  </div>
+  
 </body>
 </html>
