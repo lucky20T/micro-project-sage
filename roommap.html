@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professor & Room Details</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://mqaarchitects.com/wp-content/uploads/2022/09/2-26.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 50px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(8px);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    .buttons button {
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #0066cc;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons button:hover {
+      background-color: #004c99;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    .get-direction {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .get-direction:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <h1>Professor & Room Details</h1>
+      <div class="buttons">
+        <button onclick="showSection('professor')">Professor Details</button>
+        <button onclick="showSection('room')">Room Details</button>
+      </div>
+
+      <div id="professor" class="section">
+        <h2>Professor Information</h2>
+        <p><strong>Name:</strong> prof. Madhvi Lodhi</p>
+        <p><strong>Department:</strong> Computer Science</p>
+        <p><strong>Subjects:</strong> Data Structures, Algorithms</p>
+        <p><strong>Room:</strong> Block M, Room 202</p>
+      </div>
+
+      <div id="room" class="section">
+        <h2>Room Location</h2>
+        <p><strong>Room Number:</strong> 202</p>
+        <p><strong>Block:</strong> M</p>
+        <p><strong>Floor:</strong> 2nd</p>
+        <a href="map.html" class="get-direction">Get Directions</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('professor').style.display = 'none';
+      document.getElementById('room').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

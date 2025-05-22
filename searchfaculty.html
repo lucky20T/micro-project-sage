@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Faculty | College Navigation System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://mqaarchitects.com/wp-content/uploads/2022/09/1-30.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .search-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    input, select {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      width: 250px;
+    }
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .faculty-card {
+      background: #ffffff10;
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+    .faculty-card:hover {
+      transform: scale(1.03);
+      background: #ffffff20;
+    }
+    .faculty-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .faculty-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .faculty-dept {
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>Search Faculty</h1>
+      <p>Find your faculty by name or department</p>
+    </header>
+
+    <div class="search-container">
+      <input type="text" placeholder="Enter faculty name..." id="searchInput" onkeyup="filterFaculty()"/>
+      <select id="deptSelect" onchange="filterFaculty()">
+        <option value="">All Departments</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="ME">Mechanical</option>
+        <option value="CE">Civil</option>
+        <option value="MBA">MBA</option>
+      </select>
+    </div>
+
+    <div class="faculty-grid" id="facultyList">
+      <!-- Sample Faculty Card -->
+      <div class="faculty-card" data-name="Ravi Kumar" data-dept="CSE">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Faculty">
+        <div class="faculty-name">Prof. Gaurav Aggarwal</div>
+        <div class="faculty-dept">CSE Department</div>
+      </div>
+      <div class="faculty-card" data-name="Neha Sharma" data-dept="ECE">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Faculty">
+        <div class="faculty-name">Prof.Neha Sharma</div>
+        <div class="faculty-dept">ECE Department</div>
+      </div>
+      
+      <div class="faculty-card" data-name="Manish Verma" data-dept="MBA">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Faculty">
+        <div class="faculty-name">prof.Manish Verma</div>
+        <div class="faculty-dept">MBA Department</div>
+      </div>
+      
+      <!-- Add more as needed -->
+    </div>
+  </div>
+    
+
+  <script>
+    function filterFaculty() {
+      let input = document.getElementById('searchInput').value.toLowerCase();
+      let dept = document.getElementById('deptSelect').value;
+      let cards = document.querySelectorAll('.faculty-card');
+
+      cards.forEach(card => {
+        let name = card.dataset.name.toLowerCase();
+        let cardDept = card.dataset.dept;
+        let matchesName = name.includes(input);
+        let matchesDept = dept === "" || cardDept === dept;
+        card.style.display = matchesName && matchesDept ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
+
