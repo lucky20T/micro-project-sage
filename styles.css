@@ -119,15 +119,3 @@ a:hover {
       max-width: 100%;
     }
 }
-#two {
-    height: 100vh; /* Ensures section height equals the viewport height */
-    width: 100vw;  /* Ensures full width of the viewport */
-    background-image: url('asset/image/back.jpg'); /* Background image */
-
-    background-size: cover;       /* Scales image to cover the entire section */
-    background-position: center;  /* Keeps the image centered */
-    background-repeat: no-repeat; /* Prevents tiling */
-    margin: 0;
-    padding: 0;
-}
-
